@@ -6,13 +6,141 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <NumberPicker
+        android:id="@+id/numberPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/clearButton"
+        app:layout_constraintTop_toBottomOf="@+id/numberPicker"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:text="번호 추가하기"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <Button
+        android:id="@+id/clearButton"
+        android:text="초기화"
+        app:layout_constraintTop_toTopOf="@+id/addButton"
+        app:layout_constraintStart_toEndOf="@+id/addButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        app:layout_constraintTop_toBottomOf="@id/addButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="1"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/circle_blue"
+            />
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_yellow"
+            />
+
+        <TextView
+            android:id="@+id/TextView3"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:background="@drawable/circle_red"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/TextView4"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="1"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="5dp"
+            android:background="@drawable/circle_grey"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/TextView5"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="1"
+            android:background="@drawable/circle_grey"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/TextView6"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:text="1"
+            android:background="@drawable/circle_grey"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/runButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="자동 생성 시작"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
